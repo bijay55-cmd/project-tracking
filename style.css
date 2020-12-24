@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body::after{
+    background-color: rgb(198, 199, 206);
+    content: '';
+    position: absolute;
+    border-bottom-left-radius:20px;
+    top: 0;
+    right:0;
+    z-index: -1;
+    height: 50%;
+    width: 40%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+nav img{
+    width: 3%;
+}
+.login{
+    list-style: circle;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    margin: 0 15px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.hamburger{
+    display: none;
+}
+
+.container img{
+    margin: 5% 0;
+max-width: 100%;
+object-position:50px 0;
+}
+.paragraph{
+    position: relative;
+    font-size: 15px;
+    padding: 0 10%;
+    margin: 30% 0;
+}
+.new{
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+.mono{
+    color: grey;
+}
+.team{
+    margin: 5% 0;
+}
+.demo{
+    margin: 5% 0;
+}
+.demo button{
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+@media (max-width: 480px){
+    nav img{
+        width:10%;
+    }
+    ul{
+        background-color: whitesmoke;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        flex-direction: column;
+        text-align: center;
+        top: 80px;
+        width: 80%;
+        left: 10%;
+        transform: translate(120%);
+    }
+    ul li{
+        margin: 10px;
+    }
+    .hamburger{
+        display: block;
+        padding: 10px;
+    }
+    nav ul.show{
+        transform: translate(0);
+    }
+}
+@media all and (min-width: 768px){
+    .container img{
+    object-position: 150px 0;
+
+    }
+    .paragraph{
+        font-size: 20px;
+        margin-left: 10%;
+    }
+}
+@media screen and (min-width: 1020px){
+    body::after{
+        height: 30%;
+        width: 40%;
+    }
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .container img{
+        margin: 10% 0;
+        max-width: 100%;
+        object-position:100px 0;
+    }
+    .paragraph{
+        margin: 10% 0;
+        width: 100%;
+    }
+    .team{
+        margin: 5% 0;
+    }
+    .demo{
+        margin: 5% 0;
+    }
+}
